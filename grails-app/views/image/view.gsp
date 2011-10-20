@@ -12,7 +12,7 @@
       <b> s-limit = ${session.slimit} </b><br>
       <b> fmt = ${session.format} </b><br>
     	<div style="margin:10px;"><img src="<g:createLink controller='image' action='renderImage' id='${params.id}'/>"/></div>
-  	  <button type="button" value="Use Image">Use Image</button>
+      <button type="button" value="Use Image" onClick='window.opener.document.getElementByID("avatar").src="${createLink(controller:"image",action:"downloadFile")}"'>Use Image</button>
       <button type="button" value="Upload Image" onClick="window.location.href='http://localhost:8080/ImageUtil/image/upload.gsp'">Upload Image</button>
     </body>
 </html>
